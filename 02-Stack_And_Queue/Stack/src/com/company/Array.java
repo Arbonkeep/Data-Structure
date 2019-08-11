@@ -34,7 +34,7 @@ public class Array<E> {
     //在数组的末尾添加一个元素
     public void addLast(E e) {
         if (size == data.length) {
-            System.out.println("数组中的最大容量已满");
+            throw new ArrayIndexOutOfBoundsException("数组容量已满");
         }else {
             data[size] = e;
             size ++;//增加了一个元素所以size改变
@@ -103,6 +103,16 @@ public class Array<E> {
            throw new ArrayIndexOutOfBoundsException("数组索引越界");
         }
         return data[index];
+    }
+
+    //定义一个获取第一个元素的方法
+    public E getFirst() {
+        return get(0);
+    }
+
+    //定义一个获取最后一个元素的方法
+    public E getLast() {
+        return get(getSize() - 1 );
     }
 
     //定义一个设置指定索引位置元素的方法
