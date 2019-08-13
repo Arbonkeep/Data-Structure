@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
         //1.定义一个变量
-        int opCount = 200000;
+        int opCount = 100000;
         //2.分别创建queue的两个子类对象调用方法进行测试
         ArrayQueue<Integer> queue1 = new ArrayQueue<>();
         double time1 = testQueue(queue1, opCount);
@@ -16,6 +16,10 @@ public class Main {
         LoopQueue<Integer> queue2 = new LoopQueue<>();
         double time2 = testQueue(queue2, opCount);
         System.out.println(time2);
+
+        LinkedListQueue<Integer> queue3 = new LinkedListQueue<>();
+        double time3 = testQueue(queue3, opCount);
+        System.out.println(time3);
     }
 
     //定义一个测试两种运行时间的方法
@@ -37,6 +41,6 @@ public class Main {
 
         //3.定义一个结束时间
         long end = System.currentTimeMillis();
-        return (double) ((end - start) / 1000);
+        return (double) ((end - start) / 1000.0);
     }
 }

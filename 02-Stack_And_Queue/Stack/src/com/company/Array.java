@@ -33,15 +33,15 @@ public class Array<E> {
 
     //在数组的末尾添加一个元素
     public void addLast(E e) {
-        if (size == data.length) {
+       /* if (size == data.length) {
             throw new ArrayIndexOutOfBoundsException("数组容量已满");
         }else {
             data[size] = e;
             size ++;//增加了一个元素所以size改变
         }
-
+        */
         //方法复用
-        //add(size,e);
+        add(size,e);
     }
 
     //在指定位置添加一个元素
@@ -67,7 +67,7 @@ public class Array<E> {
         //创建一个新数组
         E[] newData = (E[]) new Object[newCapacity];
         //遍历,将data中的元素转移到newData
-        for (int i = 0; i < data.length ; i++) {
+        for (int i = 0; i < size ; i++) {
             newData[i] = data[i];
         }
         //将data的引用指向newData
