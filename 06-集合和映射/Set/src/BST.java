@@ -198,7 +198,7 @@ public class BST<E extends Comparable<E>> {//二分搜索树必须要有可比�
     }
 
     //定义二分搜索树中寻找最小元素的方法
-    public E minmum() {
+    public E minmum() { 
         if(size == 0) {
             throw new IllegalArgumentException("二分树为空");
         }
@@ -222,7 +222,7 @@ public class BST<E extends Comparable<E>> {//二分搜索树必须要有可比�
         return maxmum(root).e;
     }
 
-    //返回以node为根的二分搜索树最小值所在节点
+    //返回以node为根的二分搜索树最大值所在节点
     private Node maxmum(Node node) {
         if(node.right == null) {
             return node;
@@ -251,7 +251,7 @@ public class BST<E extends Comparable<E>> {//二分搜索树必须要有可比�
         return node;
     }
 
-    //从二分搜索树中删除最小值所在的节点
+    //从二分搜索树中删除最大值所在的节点
     public E removeMax() {
         E ret = maxmum();//将最大值存起来
         root = removeMax(root);//调用函数进行删除
