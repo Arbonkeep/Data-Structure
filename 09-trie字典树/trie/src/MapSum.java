@@ -66,7 +66,7 @@ public class MapSum {
         int result = node.value;
 
         for (char c : node.next.keySet()) {
-            result += sum(node.next.get(c));
+            result += sum(node.next.get(c ));
         }
 
         return result;
