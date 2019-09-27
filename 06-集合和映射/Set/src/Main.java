@@ -38,6 +38,11 @@ public class Main {
         System.out.println(time1);
         System.out.println(time2);
 
+        //测试AVLSet
+        AVLSet<String> avlSet = new AVLSet<>();
+        double time3 = testSet(avlSet, fileName);
+        System.out.println(time3);
+
     }
 
 }

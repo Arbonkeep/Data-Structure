@@ -15,6 +15,11 @@ public class Main {
         System.out.println(time1);
         System.out.println(time2);
 
+        //3.测试AVLMap
+        AVLMap<String, Integer> map2 = new AVLMap<>();
+        double time3 = testMap(map2, fileName);
+        System.out.println(time3);
+
     }
 
     //定义一个比较程序性能的方法
